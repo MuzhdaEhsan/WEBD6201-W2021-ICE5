@@ -163,11 +163,6 @@
 
     function displayContactList() 
     {
-
-      
-
-      $("#contactListLink").attr("class", "nav-link active");
-
       if (localStorage.length > 0) 
       {
         

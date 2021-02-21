@@ -164,15 +164,9 @@
     function displayContactList() 
     {
 
-      
-
-      $("#contactListLink").attr("class", "nav-link active");
-
+      $("#contactListLink").setAttribute("class", "nav-link active")
       if (localStorage.length > 0) 
       {
-        
-        //document.getElementById("contactListLink").setAttribute("class", "nav-link active");
-
         let contactList = document.getElementById("contactList");
 
         let data = "";
@@ -369,8 +363,8 @@
           });
 
           $(`<li class="nav-item">
-            <a id="contactListLink" class="nav-link" aria-current="page" href="contact-list.html"><i class="fas fa-users fa-lg"></i> Contact List</a>
-          </li>`).insertBefore("#login");
+              <a id="contactListLink" class="nav-link" aria-current="page" href="contact-list.html"><i class="fas fa-users fa-lg"></i> Contact List</a>
+            </li>`).insertBefore("#login");
         }
     }
 
@@ -396,7 +390,6 @@
               displayContact();
             break;
           case "Contact-List":
-           
             displayContactList();
             break;
           case "Edit":
