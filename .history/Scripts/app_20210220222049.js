@@ -346,7 +346,7 @@
 
     }
 
-    function toggleLogin()
+    function displayLogout()
     {
       if(sessionStorage.getItem("user"))
         {
@@ -400,7 +400,7 @@
         }    
         
         // call displayLogout function 
-        toggleLogin();
+        displayLogout();
     }
 
     window.addEventListener("load", Start);

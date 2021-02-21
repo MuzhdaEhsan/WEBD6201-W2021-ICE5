@@ -346,24 +346,6 @@
 
     }
 
-    function toggleLogin()
-    {
-      if(sessionStorage.getItem("user"))
-        {
-          $("#login").html(
-            `<a id="logout" class="nav-link" aria-current="page" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>`
-          );
-
-          $("#logout").on("click", function(){
-
-            // perform logout 
-            sessionStorage.clear();
-            //redirect back to login
-            location.href = "login.html";
-          });
-        }
-    }
-
     function Start()
     {
         console.log("App Started...");
@@ -397,10 +379,16 @@
           case "Register":
             displayRegister();
           break;
-        }    
+        }
+
+        if(sessionStorage.getItem("user"))
+        {
+          $("#login").html(
+            `<a id="logout" class="nav-link" aria-current="page" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>`
+          )
+        }
+
         
-        // call displayLogout function 
-        toggleLogin();
     }
 
     window.addEventListener("load", Start);

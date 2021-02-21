@@ -400,7 +400,7 @@
         }    
         
         // call displayLogout function 
-        toggleLogin();
+        displayLogout();
     }
 
     window.addEventListener("load", Start);

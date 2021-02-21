@@ -1,10 +1,10 @@
 "use strict";
 
 (() =>{
-    // checking if the user is not login
+    // checking if the user is login
     if(!sessionStorage.getItem("user"))
     {
-    // redirect to login page
+    // redirect to secure area
     location.href = "login.html";
     }
 })();

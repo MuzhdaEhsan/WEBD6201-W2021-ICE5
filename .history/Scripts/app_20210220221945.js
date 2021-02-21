@@ -346,7 +346,7 @@
 
     }
 
-    function toggleLogin()
+    function displayLogout()
     {
       if(sessionStorage.getItem("user"))
         {
@@ -397,10 +397,7 @@
           case "Register":
             displayRegister();
           break;
-        }    
-        
-        // call displayLogout function 
-        toggleLogin();
+        }       
     }
 
     window.addEventListener("load", Start);

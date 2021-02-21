@@ -346,7 +346,7 @@
 
     }
 
-    function toggleLogin()
+    function displayLogout()
     {
       if(sessionStorage.getItem("user"))
         {
@@ -399,8 +399,7 @@
           break;
         }    
         
-        // call displayLogout function 
-        toggleLogin();
+        displayLogout();
     }
 
     window.addEventListener("load", Start);
