@@ -163,8 +163,6 @@
 
     function displayContactList() 
     {
-
-      
       if (localStorage.length > 0) 
       {
         let contactList = document.getElementById("contactList");
@@ -275,13 +273,6 @@
 
     function displayLogin()
     {
-
-      // checking if the user is already login
-      if(sessionStorage.getItem("user"))
-      {
-        // redirect to secure area
-        location.href = "contact-list.html";
-      }
       let messageArea = $("messageArea");
       //console.log(messageArea);
       messageArea.hide();
@@ -299,10 +290,11 @@
               
               for(const user of data.users)
               {
+                  
+
                   // check each user in the user.json file
                   if(username.val() == user.Username && password.val() == user.Password)
                   {
-                    newUser.fromJSON(user);
                     success = true;
                     break;
                   }
@@ -311,12 +303,11 @@
               if(success)
               {
                 // add the user to the session 
-                sessionStorage.setItem("user", newUser.serialize());
+
                 // hide the error message if there is one
                 messageArea.removeAttr("class").hide();
 
                 // redirect user to secure 
-                location.href = "contact-list.html";
               }
               else
               {
